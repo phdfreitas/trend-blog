@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Trend
+{% endblock title %}
+
+{% block content %}
+    <h1>Excluir Postagem</h1>
+    <h4>Essa operação não poderá ser desfeita.</h4>
+<form method="post"> {% csrf_token %}
+        <p>Você tem certeza que deseja excluir {{post.title}} ?</p>
+        <input type="submit" value="Excluir">
+    </form>
+{% endblock content %}

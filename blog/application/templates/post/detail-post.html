@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Trend
+{% endblock title %}
+
+{% block content %}
+    <p>{{post.content}}</p>
+    <span>{{post.published}}</span> | <span>{{post.updated}}</span>
+    <p><a href="{{post.get_absolute_url_update}}">Atualizar Postagem</a></p>
+    <p><a href="{{post.get_absolute_url_delete}}">Excluir Postagem</a></p>
+{% endblock content %}
