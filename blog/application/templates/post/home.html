@@ -12,30 +12,22 @@
     <!-- CSS e Links Externos-->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <title>{% block title %}{% endblock title %}</title>
+    <title>Trend - Share your thoughts</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Trend</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="{% url 'newPost' %}">Nova Postagem</a>
-                    <a class="nav-link" href="{% url 'listPosts' %}">Todos os posts</a>
-                </div>
+    <div style="border-bottom-color: white; background-color: #005DE0; border-bottom-style: solid;">
+        <div class="container">
+            <div class="row" style="color: white;">
+                <h1>Trend</h1>
             </div>
-        </nav>
-    </header>
-
-    <div class="container">
-        {% block content %}
-
-        {% endblock content %}
+        </div>
     </div>
-
+    <div class="jumbotron" style="background-color: #005DE0; color: white;">
+        <h1 class="display-4">Explore new thoughts and ideas now.</h1>
+        <p class="lead">Share your thoughts and read new ideas. A perfect place to learn new things or just spend some
+            time.</p>
+        <a class="btn btn-warning btn-lg" href="#" role="button">Join community.</a>
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

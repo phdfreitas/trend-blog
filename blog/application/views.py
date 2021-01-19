@@ -2,7 +2,12 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 from django.views.generic.edit import CreateView
+from django.views.generic.base import TemplateView
 from .models import Post
+
+
+class HomeView(TemplateView):
+    template_name = 'post/home.html'
 
 
 class PostCreateView(CreateView):
