@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'application',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -113,6 +114,12 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+# Login and Logout
+LOGIN_REDIRECT_URL = 'home'
+
+LOGOUT_REDIRECT_URL = 'home'
 
 
 # Static files (CSS, JavaScript, Images)

@@ -20,6 +20,12 @@
             <div class="row" style="color: white;">
                 <h1>Trend</h1>
             </div>
+
+            {% if user.is_authenticated %}
+                <span style="color: white;">Bem-vindo, {{user.username}}</span>
+                <span style="color: white;"> <a href="{% url 'logout' %}">Sair</a> </span>
+            {% endif %}
+
         </div>
     </div>
     <div class="jumbotron" style="background-color: #005DE0; color: white;">
