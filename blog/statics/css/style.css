@@ -1,0 +1,53 @@
+/* ==== Home Style ==== */
+    /* Navbar */
+
+    .main{
+        background-color: #005DE0;
+        padding: 2px;
+    }
+
+    .main hr{
+        background-color: #FFFFFF;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar-color{
+        background-color: #005DE0;
+        border-bottom-color: #FFFFFF;
+    }
+
+    .navbar-links{
+        color: #FFF;
+    }
+
+    .navbar-btn a:hover{
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    .desc{
+        background-color: #005DE0;
+        color: #FFFFFF;
+    }
+
+    .section1{
+        margin: 20px 0 0 25px;
+    }
+
+    .section1 hr{
+        padding: 0;
+        margin: 0;
+    }
+
+    .section1 h3 a{
+        text-decoration: none;
+    }
+
+    .section1 h3 a:link{
+        color: #005DE0;
+    }
+
+    .trending{
+        width: 750px;
+    }
