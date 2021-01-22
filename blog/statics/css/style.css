@@ -51,3 +51,40 @@
     .trending{
         width: 750px;
     }
+
+/* ==== Login ==== */
+.login, .cadastro{
+    border: 1px solid #000;
+    width: 500px;
+    margin: 100px auto;
+}
+
+.login h2, .cadastro h2{
+    margin: 10px auto;
+    width: 500px;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+
+.login div.dados-form, .cadastro div.dados-form{
+    text-align: center;
+}
+
+.login form, .cadastro form{
+    margin: 25px auto;
+    list-style-type: none;
+}
+
+.login div.button, .cadastro div.button{
+    text-align: center;
+}
+
+.cadastro form{
+    width: 60%;
+    padding: 16px;
+}
+
+.helptext{
+    display: none;
+}

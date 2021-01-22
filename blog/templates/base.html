@@ -15,20 +15,34 @@
     <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Trend</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="{% url 'newPost' %}">Nova Postagem</a>
-                    <a class="nav-link" href="{% url 'listPosts' %}">Todos os posts</a>
-                </div>
-            </div>
+    <div class="main">
+        <nav class="navbar navbar-expand-sm navbar-light navbar-color">
+          <!-- Logo -->
+          <button class="btn btn-lg navbar-btn" style="font-size: 1.9em;">
+              <a href="/" class="navbar-links">Trend</a>
+          </button>
+
+          <!-- Navegação -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <button class="btn btn-lg navbar-btn">
+                    <a href="{% url 'login' %}" class="navbar-links">Sign in</a>
+                </button>
+            </li>
+
+            <li class="nav-item">
+                <button class="btn btn-lg navbar-btn">
+                    <a href="{% url 'newUser' %}" class="navbar-links">Get Started</a>
+                </button>
+            </li>
+          </ul>
+
+            {% if user.is_authenticated %}
+                <span style="color: white;">Bem-vindo, {{user.username}}</span>
+                <span style="color: white;"> <a href="{% url 'logout' %}">Sair</a> </span>
+            {% endif %}
         </nav>
-    </header>
+    </div>
 
     <div class="container">
         {% block content %}
@@ -36,6 +50,7 @@
         {% endblock content %}
     </div>
 
+    <script src="{% static 'js/script.js' %}"></script>
 
     <!-- Optional JavaScript; choose one of the two! -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

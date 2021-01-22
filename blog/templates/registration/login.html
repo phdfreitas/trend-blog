@@ -5,7 +5,7 @@
 {% endblock title %}
 
 {% block content %}
-    <div class="row background-color">
+    <div class="row login">
         <h2>Faça seu login</h2>
         <form method="post">{% csrf_token %}
             <div class="dados-form form-group">
@@ -13,8 +13,9 @@
             </div>
 
             <div class="button">
-                <button type="submit" class="btn btn-success">Cadastrar</button>
+                <button type="submit" class="btn btn-success">Entrar</button>
             </div>
         </form>
+
     </div>
 {% endblock content %}
